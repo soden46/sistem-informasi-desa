@@ -58,7 +58,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="cretaeDataMasyarakatLabel">Tambah Data Surat Keterangan Beda Nama</h1>
+                            <h1 class="modal-title fs-5" id="cretaeDataMasyarakatLabel">Tambah Data Surat Keterangan Kematian</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <form action="{{route('warga/surat-keterangan-kematian/save')}}" method="POST" enctype="multipart/form-data">
@@ -105,7 +105,7 @@
                                     <select class="form-select" name="nik_mati" id="nik_mati">
                                         <option name="nik_mati" id="nik_mati" value="" selected>Silakan Pilih NIK Jenazah</option>
                                         @foreach($pendu as $penduduk)
-                                        <option name="nik_mati" id="nik_mati" value="{{$penduduk->nik}}">{{$penduduk->nik}} | {{$penduduk->nama}}</option>
+                                        <option name="nik_mati" id="nik_mati" value="{{$penduduk->nik}}">{{$penduduk->nik}} | {{$penduduk->nama}} | {{$kep->no_kk}}</option>
                                         @endforeach
                                     </select>
                                 </div>

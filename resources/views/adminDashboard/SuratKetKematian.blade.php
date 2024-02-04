@@ -105,7 +105,7 @@
                                     <select class="form-select" name="nik_mati" id="nik_mati">
                                         <option name="nik_mati" id="nik_mati" value="" selected>Silakan Pilih NIK Jenazah</option>
                                         @foreach($pendu as $penduduk)
-                                        <option name="nik_mati" id="nik_mati" value="{{$penduduk->nik}}">{{$penduduk->nik}} | {{$penduduk->nama}}</option>
+                                        <option name="nik_mati" id="nik_mati" value="{{$penduduk->nik}}">{{$penduduk->nik}} | {{$penduduk->nama}} | {{$kep->no_kk}}</option>
                                         @endforeach
                                     </select>
                                 </div>
