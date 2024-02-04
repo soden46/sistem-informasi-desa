@@ -166,7 +166,7 @@
                 </tr>
             </table>
             <br>
-            <p>adalah orang yang sama dengan yang tertulis di ............................. sama dengan data :</p>
+            <p>adalah orang yang sama dengan yang tertulis di {{$surat->pend->tertulis_pada}} sama dengan data :</p>
             <table class="font-12">
                 <tr>
                     <td width="200px">A. Nama</td>
