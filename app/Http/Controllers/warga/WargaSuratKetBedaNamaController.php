@@ -129,7 +129,6 @@ class WargaSuratKetBedaNamaController extends Controller
     {
         $data = [
             'title' => 'Keterangan Beda Nama',
-            'profil' => ProfilDesa::firstWhere('id', 1),
             'surat' => SuratKetBedaNama::with('pend')->where('nik', $nik)->first(),
             'pendu' => Penduduk::get()
         ];
@@ -143,7 +142,6 @@ class WargaSuratKetBedaNamaController extends Controller
     {
         $data = [
             'title' => 'Keterangan Beda Nama',
-            'profil' => ProfilDesa::firstWhere('id', 1),
             'surat' => SuratKetBedaNama::with('pend')->where('nik', $nik)->first(),
             'pendu' => Penduduk::get()
         ];
@@ -161,7 +159,7 @@ class WargaSuratKetBedaNamaController extends Controller
     public function showLampiran($nik)
     {
         $kematian = SuratKetBedaNama::where('nik', $nik)->with('pend')->first();
-        $lampiran = json_decode($kematian->lampiran, true);
+        $lampiran = json_decode($kematian->lampiran ?? '', true);
         if (isset($lampiran['ktp']) && ($lampiran['kk'])) {
             // dd($lampiran['pengantar_rt']);
             return view('wargaDashboard.lampiran.LampiranDataBedaNama', [
@@ -182,8 +180,8 @@ class WargaSuratKetBedaNamaController extends Controller
     public function lampiranStore(Request $request, $nik)
     {
         $request->validate([
-            'ktp' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'kk' => 'file|mimes:pdf,jpg,jpeg|max:2048',
+            'ktp' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'kk' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
         ]);
 
         $lampiran = [];

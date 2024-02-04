@@ -274,15 +274,15 @@ class SuratKetKelahiranController extends Controller
     public function lampiranStore(Request $request, $nik_bayi)
     {
         $request->validate([
-            'pengantar_rt' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'surat_ket_kelahiran' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'kk' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_suami' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_istri' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'buku_nikah' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_pelapor' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_saksi' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_saksi2' => 'file|mimes:pdf,jpg,jpeg|max:2048',
+            'pengantar_rt' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'surat_ket_kelahiran' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'kk' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_suami' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_istri' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'buku_nikah' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_pelapor' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_saksi' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_saksi2' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
         ]);
 
         $lampiran = [];

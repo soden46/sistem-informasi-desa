@@ -94,7 +94,7 @@
                                     <select class="form-select" name="nama_kepala_keluarga" id="nama_kepala_keluarga">
                                         <option name="nama_kepala_keluarga" id="nama_kepala_keluarga" value="" selected>Silakan Pilih Kepala Keluarga</option>
                                         @foreach($kepala as $kep)
-                                        <option name="nama_kepala_keluarga" id="nama_kepala_keluarga" value="{{$kep->nama}}">{{$kep->nik}} | {{$kep->nama}}</option>
+                                        <option name="nama_kepala_keluarga" id="nama_kepala_keluarga" value="{{$kep->nama}}">{{$kep->nik}} | {{$kep->nama}} | {{$kep->no_kk}}</option>
                                         @endforeach
                                     </select>
                                 </div>

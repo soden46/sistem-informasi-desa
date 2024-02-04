@@ -117,7 +117,6 @@ class WargaSuratKetStatusController extends Controller
     {
         $data = [
             'title' => 'Keterangan Status',
-            'profil' => ProfilDesa::firstWhere('id', 1),
             'surat' => SuratKetStatus::with('pend')->where('nik', $nik)->first(),
             'pendu' => Penduduk::get()
         ];
@@ -131,7 +130,6 @@ class WargaSuratKetStatusController extends Controller
     {
         $data = [
             'title' => 'Keterangan Status',
-            'profil' => ProfilDesa::firstWhere('id', 1),
             'surat' => SuratKetStatus::with('pend')->where('nik', $nik)->first(),
             'pendu' => Penduduk::get()
         ];
@@ -169,8 +167,8 @@ class WargaSuratKetStatusController extends Controller
     public function lampiranStore(Request $request, $nik)
     {
         $request->validate([
-            'ktp' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'kk' => 'file|mimes:pdf,jpg,jpeg|max:2048',
+            'ktp' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'kk' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
         ]);
 
         $lampiran = [];

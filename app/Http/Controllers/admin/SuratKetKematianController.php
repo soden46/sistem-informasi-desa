@@ -251,13 +251,13 @@ class SuratKetKematianController extends Controller
     public function lampiranStore(Request $request, $nik_mati)
     {
         $request->validate([
-            'pengantar_rt' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'pengantar_dokter' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'kk' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_jenazah' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_pelapor' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_saksi' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_saksi2' => 'file|mimes:pdf,jpg,jpeg|max:2048',
+            'pengantar_rt' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'pengantar_dokter' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'kk' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_jenazah' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_pelapor' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_saksi' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_saksi2' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
         ]);
 
         $lampiran = [];

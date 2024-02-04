@@ -193,7 +193,6 @@ class WargaMutasiMasukController extends Controller
     {
         $data = [
             'title' => 'Mutasi Masuk',
-            'profil' => ProfilDesa::firstWhere('id', 1),
             'surat' => MutasiMAsuk::with('pend')->where('nik_mm', $nik_mm)->first(),
             'pendu' => Penduduk::get(),
         ];
@@ -230,9 +229,9 @@ class WargaMutasiMasukController extends Controller
     public function lampiranStore(Request $request, $nik_mm)
     {
         $request->validate([
-            'kk' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_mm' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_pelapor' => 'file|mimes:pdf,jpg,jpeg|max:2048',
+            'kk' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_mm' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_pelapor' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
         ]);
 
         $lampiran = [];

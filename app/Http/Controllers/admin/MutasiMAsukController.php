@@ -196,9 +196,9 @@ class MutasiMAsukController extends Controller
     public function lampiranStore(Request $request, $nik_mm)
     {
         $request->validate([
-            'kk' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_mm' => 'file|mimes:pdf,jpg,jpeg|max:2048',
-            'ktp_pelapor' => 'file|mimes:pdf,jpg,jpeg|max:2048',
+            'kk' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_mm' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
+            'ktp_pelapor' => 'file|mimes:pdf,jpg,jpeg,png|max:5048',
         ]);
 
         $lampiran = [];
