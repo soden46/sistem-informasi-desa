@@ -1,25 +1,3 @@
-## Sistem rekrutmen
-
-Sistem Rekrutmen adalah sistem yang dibuat untuk keperluan rekrutmen pada perusahaan.
-sistem ini dibuat menggunakan framework Laravel versi 9.
-
-Support Me [Syarif Soden](https://syarifsoden.blogspot.com/).
-## Demo Link
-
-link demo website [Demo](http://).
-
-Admin/HRD
-
-Email: 
-
-Password: 
-
-User/Pelamar
-
-Email:
-
-Password:
-
 ## License
 
 The script is open-source licensed under the [MIT license](https://opensource.org/licenses/MIT).
