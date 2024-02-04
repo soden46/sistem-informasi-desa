@@ -87,7 +87,7 @@
 
                                         <select class="form-select" name="nik" id="nik">
                                             @foreach($pendu as $penduduk)
-                                            <option name="nik" id="nik" value="{{$penduduk->nik}}">{{$penduduk->nik}} | {{$penduduk->nama}}</option>
+                                            <option name="nik" id="nik" value="{{$penduduk->nik ?? ''}}">{{$penduduk->nik}} | {{$penduduk->nama}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -96,7 +96,7 @@
                                         <label for="nama" class="form-label"><b>Nama Pelapor</b></label>
 
                                         <select class="form-select" name="nama" id="nama">
-                                            <option name="nama" id="nama" value="{{$user->nama}}" selected>{{$user->nama}}</option>
+                                            <option name="nama" id="nama" value="{{$user->nama ?? ''}}" selected>{{$user->nama ?? ''}}</option>
                                         </select>
                                     </div>
 
