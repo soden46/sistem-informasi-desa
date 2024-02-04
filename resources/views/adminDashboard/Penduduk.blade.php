@@ -565,6 +565,7 @@
                                             <select class="form-select" name="sts_penduduk" id="sts_penduduk">
                                                 <option value="" selected>Silakan Pilih Status Penduduk</option>
                                                 <option name="sts_penduduk" id="sts_penduduk" value="Meninggal">Meninggal</option>
+                                                <option name="sts_penduduk" id="sts_penduduk" value="Tinggal">Tinggal</option>
                                                 <option name="sts_penduduk" id="sts_penduduk" value="Pindah Keluar">Pindah Keluar</option>
                                             </select>
                                         </div>
