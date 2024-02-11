@@ -125,8 +125,8 @@ Route::middleware(['auth', 'role:staff'])->group(function () {
             Route::get('/data-mutasi-masuk/lampiran/destroy/{nik_mm}', 'lampiranDestroy')->name('data-mutasi-masuk/lampiran/destroy')->middleware('auth');
             Route::get('/data-mutasi-masuk/lampiran/show/{nik_mm}', 'showLampiran')->name('data-mutasi-masuk/lampiran/show')->middleware('auth');
             // Route Depend Penduduk Pada Form Tambah Data
-            Route::get('getPelapor/{id}', function ($id) {
-                $nama_pelapor = App\Models\Penduduk::where('nik', $id)->get();
+            Route::get('getPelapor/{nik_pelapor}', function ($nik_pelapor) {
+                $nama_pelapor = App\Models\Penduduk::where('nik', $nik_pelapor)->get();
                 return response()->json($nama_pelapor);
             });
         }
@@ -247,9 +247,9 @@ Route::middleware(['auth', 'role:masyarakat'])->group(function () {
             Route::get('/warga/surat-ket-beda-nama/pdf/lurah/{nik}', 'pdflurah')->name('warga/surat-ket-beda-nama/pdflurah');
             // Route Depend Penduduk Pada Form Tambah Data
             Route::get(
-                'getNama/{id}',
-                function ($id) {
-                    $nama = App\Models\Penduduk::where('nik', $id)->get();
+                'getNama/{nik_pelapor}',
+                function ($nik_pelapor) {
+                    $nama = App\Models\Penduduk::where('nik', $nik_pelapor)->get();
                     return response()->json($nama);
                 }
             );
